@@ -1,0 +1,72 @@
+
+
+body
+{
+    background-color: teal;
+    background-image: url();
+    background-blend-mode:multiply ;
+}
+
+#head
+{
+    justify-content: center;
+    align-items: center;
+    color: rgb(227, 234, 240);
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+
+
+input
+{
+    
+    background-color:rgb(255, 255, 255);
+    font: 1em sans-serif;
+    font-style: normal;
+    color: rgb(19, 13, 13);
+}
+
+.label
+{
+    color: white;
+    font-size: 12px;
+    font-family: sans-serif;
+    margin-bottom: 1px;
+}
+input[type=text], select {
+    width: 220px;
+    padding: 10px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+  input[type=password], select {
+    width: 220px;
+    padding: 10px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+
+ 
+  input[type=submit] {
+    width: 220px;
+    padding: 10px 20px;
+    display: inline-block;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    
+  }
+
+  .login-a{
+    padding: 30px;
+    font-size: 13px;
+    text-align:center;
+    text-decoration: none;
+  }
+ 

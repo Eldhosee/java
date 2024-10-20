@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+
+
+/* background image */
+ .login-bgimage {
+  background-blend-mode: luminosity;
+  background-image: url("../Asset/loginbg.png");
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+
+
+} 
+
+
+
+/* div class of  fullside  */
+
+.login-container {
+  display: flex;
+  height: 400px;
+  width: 1000px;
+  border: 2px solid gray;
+  margin: auto;
+  margin-top: 50px;
+
+}
+
+/* div class of font in navabar */
+.login-backroundfont h1 {
+  text-align: center;
+  font-family: "Boogaloo", sans-serif;
+
+}
+
+
+.login-backroundfont h2 {
+  text-align: center;
+  font-family: "Boogaloo", sans-serif;
+
+  color: black;
+}
+
+/* form class of  leftside */
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+
+}
+
+.form h2 {
+
+  margin: 40px;
+  font-family: "Boogaloo", sans-serif;
+  font-size: 22px;
+
+}
+
+/* class of input fields in leftside */
+.box {
+  padding: 12px;
+  width: 65%;
+  margin: 15px;
+  border: 1px solid black;
+  outline: none;
+  border-radius: 20px;
+}
+
+/* frgot password link in left side */
+
+.form a {
+  text-decoration: none;
+  color: rgb(8, 2, 2);
+  margin-top: 20px;
+}
+
+.form a:hover {
+  color: rgb(201, 25, 25)
+}
+
+/* submit button in left */
+#submit {
+
+  padding: 12px 30px;
+  width: 40%;
+  margin-top: 40px;
+  background-color: rgb(245, 11, 11);
+  color: white;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+
+#submit:hover {
+  cursor: pointer;
+  background-color: rgb(1, 5, 0);
+
+}
+
+input[type="checkbox"] {
+  accent-color: rgb(245, 11, 11);
+}
+
+/* centre borderline */
+.login-centre {
+  height: 400px;
+  border: 1px solid rgba(37, 37, 37, 0.288);
+}
+
+
+.form2 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+}
+
+.form2 h3 {
+
+
+  font-family: "Boogaloo", sans-serif;
+  font-size: 22px;
+}
+
+/* right side */
+
+.login-rightside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  /* background-color: white; */
+}
+
+/* submit button in right */
+
+#submit2 {
+  padding: 12px 30px;
+  width: 70%;
+  margin-top: 40px;
+  background-color: rgb(245, 11, 11);
+  color: white;
+  font-weight: bold;
+  font-style: normal;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+
+#submit2:hover {
+  cursor: pointer;
+  background-color: rgb(1, 5, 0);
+}
+
+/* navbar */
+
+.login-nav-logo {
+  margin-left: 10px;
+  height: 17px;
+}
+
+
+
+
+#login-nav-items {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#login-nav {
+  background: #333;
+  position: relative;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.login-nav-item {
+  color: #fff;
+  text-decoration: none;
+  margin: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+.login-nav-item {
+  color: rgb(245, 11, 11);
+  text-decoration: none;
+  margin: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
