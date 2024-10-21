@@ -1,3 +1,5 @@
+<%@page import="dao.ViewProfile"%>
+<%@page import="Bean.Customer"%>
 <%@page import="dao.ViewFlightsDao"%>
 <%@page import="Bean.Flight"%>
 <%@page import="java.util.ArrayList"%>
@@ -241,28 +243,38 @@
  
  
     </div>
- 
+ <%
+String id="10002";
+	Customer obj= null;
+	obj=ViewProfile.viewProfile(id);
+	if (obj!=null)
+	{
+%>
 <div id="editmyprofile">
     <div id="editmyprofile-container">
         <a href="#myprofile" onclick="showPage('myprofile')" class="]"><span class="material-symbols-outlined">
                 arrow_back
             </span></a>
  
-        <form id="myprofile-form">
+        <form id="myprofile-form" action="ProfileUpdate" method="post">
             <h2> My Profile </h2>
-            <input class="myprofile-form-item" type="text" placeholder="First Name" />
-            <input class="myprofile-form-item" type="text" placeholder="Last Name" />
- 
-            <input class="myprofile-form-item" type="date" placeholder="DOB" />
- 
-            <input class="myprofile-form-item" type="email" placeholder="EmailID" />
-            <input class="myprofile-form-item" type="textfield" placeholder="Address" />
-            <input class="myprofile-form-item" type="number" placeholder="Contact Number" />
+                      <input class="myprofile-form-item" type="text" name="firstName" placeholder="First Name" value="<%= obj.getFirstName() %>" />
+            <input class="myprofile-form-item" type="text" name="lastName" placeholder="Last Name" value="<%= obj.getLastName() %>" />
+            
+            <input class="myprofile-form-item" type="date" name="dob" placeholder="DOB" value="<%= obj.getDOB() %>" />
+            
+            <input class="myprofile-form-item" type="email" name="email" placeholder="EmailID" value="<%= obj.getEmailId() %>" />
+            <input class="myprofile-form-item" type="text" name="address" placeholder="Address" value="<%= obj.getAddress() %>" />
+            <input class="myprofile-form-item" type="number" name="phone" placeholder="Contact Number" value="<%= obj.getPhone() %>" />
+            <input class="myprofile-form-item" type="text" name="category" placeholder="category" value=" <%= obj.getCategory() %>" disabled />
+            <input class="myprofile-form-item" type="hidden" name="id" placeholder="id" value="<%= obj.getUserID() %>"  />
+            
             </br>
-            <button class="myprofile-button">Edit</button>
+            <button class="myprofile-button" type="submit">Save</button>
         </form>
     </div>
 </div>
+
     <div id="myprofile">
         <div id="myprofile-container">
             <span class="myprofile-heading"> My Profile</span>
@@ -270,27 +282,32 @@
             <div class="myprofile-detail">
                 <div class="myprofile-details-item" id="myprofile-card-firstitem">
                     <span class="myprofile-card-item"> Firstname :</span>
-                    <span class="myprofile-card-item"> Firstname</span>
-                </div>
-                <div class="myprofile-details-item">
-                    <span class="myprofile-card-item"> Firstname :</span>
-                    <span class="myprofile-card-item"> last name</span>
+                    <span class="myprofile-card-item"><%= obj.getFirstName() %> </span>
                 </div>
                 <div class="myprofile-details-item">
                     <span class="myprofile-card-item"> LastName :</span>
-                    <span class="myprofile-card-item"> DD/MM/YYY</span>
+                    <span class="myprofile-card-item"><%=  obj.getLastName()  %></span>
+                </div>
+                <div class="myprofile-details-item">
+                    <span class="myprofile-card-item"> Date of Birth :</span>
+                    <span class="myprofile-card-item"> <%= obj.getDOB()  %></span>
                 </div>
                 <div class="myprofile-details-item">
                     <span class="myprofile-card-item"> Email :</span>
-                    <span class="myprofile-card-item"> email@gmail.com</span>
+                    <span class="myprofile-card-item"><%= obj.getEmailId()  %></span>
                 </div>
                 <div class="myprofile-details-item">
                     <span class="myprofile-card-item"> Address :</span>
-                    <span class="myprofile-card-item"> Address</span>
+                    <span class="myprofile-card-item"><%=  obj.getAddress()  %></span>
                 </div>
                 <div class="myprofile-details-item">
                     <span class="myprofile-card-item"> Phone Number :</span>
-                    <span class="myprofile-card-item"> 123456789</span>
+                    <span class="myprofile-card-item"><%=  obj.getPhone() %></span>
+                </div>
+            </br>
+                <div class="myprofile-details-item">
+                    <span class="myprofile-card-item">Category :</span>
+                    <span class="myprofile-card-item"> <%= obj.getCategory() %></span>
                 </div>
             </br>
                 <button class="myprofile-button" onclick="showPage('editprofile')"> Edit</button>
@@ -298,6 +315,7 @@
  
         </div>
     </div>
+    <%} %>
     <div id="mytrip">
         <div class="mytrip-header">
             <div id="mytrip-home-banner-container">

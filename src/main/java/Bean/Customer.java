@@ -8,18 +8,38 @@ public class Customer {
 	public String phone;
 	public String address;
 	public String emailId;
-	public String country;
+	public String Category;
 	public String DOB;
-	public Customer(String FirstName, String LastName,String password, String phone,String emailId,String address,String country,String DOB) {
+	public Customer(String FirstName, String LastName,String password, String phone,String emailId,String address,String Category,String DOB) {
 		this.FirstName=FirstName;
 		this.LastName=LastName;
 		this.password=password;
 		this.phone=phone;
 		this.emailId=emailId;
 		this.address=address;
-		this.country=country;
+		this.Category=Category;
 		this.DOB=DOB;
 	}
+	public Customer(String FirstName,String LastName, String phone,String emailId,String address,String Category,String DOB) {
+		this.FirstName=FirstName;
+		this.LastName=LastName;
+		
+		this.phone=phone;
+		this.emailId=emailId;
+		this.address=address;
+		this.Category=Category;
+		this.DOB=DOB;
+	}
+	 public Customer(int userID, String firstName, String lastName, String phone, String emailId, String address, String category, String dob) {
+	        this.userID = userID;
+	        this.FirstName = firstName;
+	        this.LastName = lastName;
+	        this.phone = phone;
+	        this.emailId = emailId;
+	        this.address = address;
+	        this.Category = category;
+	        this.DOB = dob;
+	    }
 	public int getUserID() {
 		return userID;
 	}
@@ -59,14 +79,14 @@ public class Customer {
 	public String getAddress() {
 		return address;
 	}
-	public void setAddress1(String address) {
+	public void setAddress(String address) {
 		this.address = address;
 	}
-	public String getCountry() {
-		return country;
+	public String getCategory() {
+		return Category;
 	}
-	public void setCountry(String country) {
-		this.country = country;
+	public void setCategory(String Category) {
+		this.Category = Category;
 	}
 	public String getDOB() {
 		return DOB;
